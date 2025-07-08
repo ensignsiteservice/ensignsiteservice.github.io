@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- Header -->
@@ -91,19 +92,19 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-3 col-md-4">
                         <a href="#valves" class="product-card">
-                            <img src="assets/images/Products/VALVES.jpeg" alt="Valves">
+                            <img src="assets/images/Products/VALVES.png" alt="Valves">
                             <p class="product-name">Valves</p>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-4">
                         <a href="#inspection-doors" class="product-card">
-                            <img src="assets/images/Products/INSPECTION_DOOR.jpeg" alt="Inspection Door">
+                            <img src="assets/images/Products/INSPECTION_DOOR.png" alt="Inspection Door">
                             <p class="product-name">Inspection Door</p>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-4">
                         <a href="#pipe-support" class="product-card">
-                            <img src="assets/images/Products/PIPE_SUPPORT.jpeg" alt="Pipe Support">
+                            <img src="assets/images/Products/PIPE_SUPPORT.png" alt="Pipe Support">
                             <p class="product-name">Pipe Support</p>
                         </a>
                     </div>
@@ -137,9 +138,66 @@
             </div>
         </div>
     </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="main-hero">
+            <div class="container">
+                <div class="row hero-content">
+                    <div class="col-lg-6">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Excellence in Engineering Solutions</h1>
+                            <p class="hero-subtitle">Leading provider of industrial components and services</p>
+                            <p class="hero-description">
+                                With years of expertise in manufacturing and supplying high-quality valves, 
+                                inspection doors, and pipe support systems, we deliver reliable solutions 
+                                that meet the highest industry standards. Our commitment to innovation and 
+                                quality ensures your projects succeed.
+                            </p>
+                            <button class="btn btn-primary contact-btn" type="button">
+                                <i class="bi bi-envelope me-2"></i>Contact Us
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-images">
+                            <div class="image-slider">
+                                <div class="slide active">
+                                    <img src="assets/images/Products/VALVES.png" alt="Valves">
+                                    <div class="slide-overlay">
+                                        <h3 class="slide-title">Valves</h3>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/images/Products/INSPECTION_DOOR.png" alt="Inspection Door">
+                                    <div class="slide-overlay">
+                                        <h3 class="slide-title">Inspection Doors</h3>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/images/Products/PIPE_SUPPORT.png" alt="Pipe Support">
+                                    <div class="slide-overlay">
+                                        <h3 class="slide-title">Pipe Support Systems</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-indicators">
+                                <div class="indicator active" data-slide="0"></div>
+                                <div class="indicator" data-slide="1"></div>
+                                <div class="indicator" data-slide="2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+     
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
