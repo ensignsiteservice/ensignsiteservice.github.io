@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
     let currentSlide = 0;
-    const slideInterval = 2000; // 2 seconds
+    const slideInterval = 3000; // 3 seconds
 
     function showSlide(index) {
         // Hide all slides
@@ -24,29 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto-advance slides
     let slideTimer = setInterval(nextSlide, slideInterval);
 
-    // Manual slide navigation
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            currentSlide = index;
-            showSlide(currentSlide);
-            
-            // Reset timer when manually navigating
-            clearInterval(slideTimer);
-            slideTimer = setInterval(nextSlide, slideInterval);
-        });
-    });
-
-    // Pause auto-advance on hover
-    const imageSlider = document.querySelector('.image-slider');
-    if (imageSlider) {
-        imageSlider.addEventListener('mouseenter', () => {
-            clearInterval(slideTimer);
-        });
-
-        imageSlider.addEventListener('mouseleave', () => {
-            slideTimer = setInterval(nextSlide, slideInterval);
-        });
-    }
 
     // Contact button functionality
     const contactBtn = document.querySelector('.contact-btn');
@@ -68,14 +45,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add smooth scrolling animation for the hero section on load
     const heroSection = document.querySelector('.main-hero');
-    if (heroSection) {
-        heroSection.style.opacity = '0';
-        heroSection.style.transform = 'translateY(30px)';
+    // if (heroSection) {
+    //     heroSection.style.opacity = '0.5';
+    //     heroSection.style.transform = 'translateY(30px)';
         
-        setTimeout(() => {
-            heroSection.style.transition = 'all 0.8s ease-out';
-            heroSection.style.opacity = '1';
-            heroSection.style.transform = 'translateY(0)';
-        }, 100);
-    }
+    //     setTimeout(() => {
+    //         heroSection.style.transition = 'all 0.5s ease-out';
+    //         heroSection.style.opacity = '1';
+    //         heroSection.style.transform = 'translateY(0)';
+    //     }, 100);
+    // }
 });
