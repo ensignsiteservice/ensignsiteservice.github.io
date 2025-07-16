@@ -1,3 +1,17 @@
+// Featured Products Carousel Controls
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainer = document.getElementById('featuredProductsScroll');
+    const prevBtn = document.getElementById('featuredPrev');
+    const nextBtn = document.getElementById('featuredNext');
+    if (scrollContainer && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+            scrollContainer.scrollBy({ left: -260, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', function() {
+            scrollContainer.scrollBy({ left: 260, behavior: 'smooth' });
+        });
+    }
+});
 // Main Section JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Image Slider Functionality
