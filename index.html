@@ -27,14 +27,11 @@
                     <img src="assets/images/logo.jpeg" alt="ESS Logo" height="70" class="me-2">
                 </a>
 
-                <!-- Search Bar (Middle) -->
+                <!-- Search Button (Middle) -->
                 <div class="d-none d-lg-flex flex-grow-1 justify-content-center mx-2">
-                    <form class="d-flex search-form" style="width: 100%; max-width: 400px;">
-                        <div class="input-group">
-                            <input class="form-control rounded-4" type="search" placeholder="Search" aria-label="Search"
-                                style="border-radius: 10px;">
-                        </div>
-                    </form>
+                    <button class="btn search-btn" id="searchToggle" type="button">
+                        <i class="bi bi-search me-2"></i>
+                    </button>
                 </div>
 
 
@@ -47,17 +44,11 @@
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <!-- Mobile Search Bar -->
+                    <!-- Mobile Search Button -->
                     <div class="d-lg-none my-3">
-                        <form class="d-flex">
-                            <div class="input-group">
-                                <input class="form-control border-end-0" type="search" placeholder="Search..."
-                                    aria-label="Search">
-                                <span class="input-group-text bg-white border-start-0">
-                                    <i class="bi bi-search text-muted"></i>
-                                </span>
-                            </div>
-                        </form>
+                        <button class="btn search-btn w-100" id="searchToggleMobile" type="button">
+                            <i class="bi bi-search me-2"></i>Search
+                        </button>
                     </div>
 
                     <ul class="navbar-nav ms-auto">
@@ -89,11 +80,14 @@
                             <a class="nav-link fw-medium" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="#enquiry">Get Enquiry</a>
+                            <a class="nav-link fw-medium btn-enquiry" href="#enquiry">
+                                Get Enquiry
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="#basket" title="Basket">
-                                <i class="bi bi-basket"></i>
+                            <a class="nav-link fw-medium cart-link" href="#basket" title="Shopping Cart">
+                                <i class="bi bi-cart3"></i>
+                                <span class="cart-badge">0</span>
                             </a>
                         </li>
                     </ul>
@@ -159,6 +153,27 @@
             </div>
         </div>
     </header>
+
+    <!-- Collapsible Search Section -->
+    <div class="search-section" id="searchSection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <form class="search-form-expanded">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="What are you looking for?" aria-label="Search" id="searchInput">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary" type="button" id="closeSearch">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main>
