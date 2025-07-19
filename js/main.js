@@ -16,18 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // Image Slider Functionality
     const slides = document.querySelectorAll('.slide');
-    const indicators = document.querySelectorAll('.indicator');
+    // const indicators = document.querySelectorAll('.indicator');
     let currentSlide = 0;
     const slideInterval = 3000; // 3 seconds
 
     function showSlide(index) {
         // Hide all slides
         slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(indicator => indicator.classList.remove('active'));
+        // indicators.forEach(indicator => indicator.classList.remove('active'));
 
         // Show current slide
         slides[index].classList.add('active');
-        indicators[index].classList.add('active');
+        // indicators[index].classList.add('active');
     }
 
     function nextSlide() {
