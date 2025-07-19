@@ -223,3 +223,75 @@
         height: 300px;
     }
 }
+
+/* Service Overview Section */
+.service-overview {
+    background-color: #f8f9fa;
+}
+
+.service-box {
+    background: #ffffff;
+    border: 0.1px solid #071952;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(7, 25, 82, 0.1);
+    /* Hand-drawn style border effect */
+    border-style: solid;
+    border-image: none;
+}
+
+.service-box:hover {
+    transform: translateY(-5px) rotate(-0.5deg);
+    box-shadow: 0 8px 25px rgba(7, 25, 82, 0.2);
+    background: #f8f9fa;
+}
+
+.service-box-full {
+    margin-bottom: 30px;
+}
+
+.service-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #071952;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Handwritten-style font */
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments for service section */
+@media (max-width: 768px) {
+    .service-box {
+        padding: 30px 15px;
+        min-height: 100px;
+    }
+    
+    .service-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-box {
+        padding: 25px 10px;
+        min-height: 80px;
+        border-radius: 15px;
+    }
+    
+    .service-box::before {
+        border-radius: 15px;
+    }
+    
+    .service-title {
+        font-size: 1.1rem;
+    }
+}
