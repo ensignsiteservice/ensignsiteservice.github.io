@@ -123,8 +123,8 @@
   background: #eee;
 }
 .featured-products-carousel .card {
-  min-width: 23%;
-  max-width: 23%;
+  min-width: 350px;
+  max-width: 350px;
   min-height: 450px;
   max-height: 450px;
   cursor: pointer;
@@ -135,51 +135,54 @@
   border-color: #0d6efd;
 }
 .featured-products-carousel .card-img-top {
-  transition: transform 0.3s, filter 0.2s;
+  height: 450px;
+  transition: /* transform 0.3s,  */filter 0.2s;
 }
 .featured-products-carousel .card:hover .card-img-top {
-  transform: scale(1.08) rotate(-2deg);
-  filter: brightness(1.1) drop-shadow(0 2px 8px #0d6efd44);
+  /* transform: scale(1.08) rotate(-2deg); */
+  filter: brightness(1.1) /* drop-shadow(0 2px 8px #0d6efd44); */
+}
+
+/* Make product images larger and move title to bottom in Products section */
+.featured-products-carousel .card-img-top.product-img-large {
+  height: 340px;
+  object-fit: contain;
+  margin-bottom: 0;
 }
 @media (max-width: 1200px) {
-  .featured-products-carousel .card {
-    min-width: 30%;
-    max-width: 30%;
-    min-height: 380px;
-    max-height: 380px;
+  .featured-products-carousel .card-img-top.product-img-large {
+    height: 260px;
   }
 }
 @media (max-width: 900px) {
-  .featured-products-carousel .card {
-    min-width: 45%;
-    max-width: 45%;
-    min-height: 320px;
-    max-height: 320px;
+  .featured-products-carousel .card-img-top.product-img-large {
+    height: 180px;
   }
 }
 @media (max-width: 600px) {
-  .featured-products-carousel .card {
-    min-width: 80vw;
-    max-width: 80vw;
-    min-height: 260px;
-    max-height: 260px;
+  .featured-products-carousel .card-img-top.product-img-large {
+    height: 120px;
   }
 }
+.featured-products-carousel .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-height: 0;
+}
 .featured-products-carousel .card-title {
+  margin-bottom: 0;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #0d6efd;
   transition: color 0.2s;
 }
+
 .featured-products-carousel .card:hover .card-title {
   color: #084298;
-}
-.featured-products-carousel .card-text {
-  color: #555;
-  transition: color 0.2s;
-  font-size: 19px;
-}
-.featured-products-carousel .card:hover .card-text {
-  color: #222;
 }
 /* Main Section Styles */
 .main-hero {
